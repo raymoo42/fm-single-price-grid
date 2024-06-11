@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <base href=".">
+  <title>Single Price Grid</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Karla', 'ui-sans-serif']
+        },
+        extend: {
+          colors: {
+            cyan: 'hsl(179, 62%, 43%)',
+            brightyellow: 'hsl(71, 73%, 54%)',
+            lightgray: 'hsl(204, 43%, 93%)',
+            grayishblue: 'hsl(218, 22%, 67%)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      html {
+          font-family: "Karla", system-ui, sans-serif;
+        }   
+        body {
+          @apply bg-lightgray
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <main role="grid"
+    class="mt-12 mx-auto md:w-2/3 w-96 container bg-white rounded-lg shadow-lg grid grid-cols-2 justify-items-stretch">
+    <section role="banner" class="p-8 w-full col-span-2 flex flex-col gap-y-4">
+      <h1 class="text-cyan text-3xl font-bold mb-4">Join our community</h1>
+      <h2 class="text-brightyellow font-bold text-lg">30-day, hassle-free money back guarantee</h2>
+      <p class="text-gray-400"> Gain access to our full library of tutorials along with expert code reviews.
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </section>
+
+    <section role="contentinfo" class="p-8 bg-cyan col-span-2 sm:col-span-1 rounded-bl-lg">
+      <h1 class="text-white text-xl font-bold py-4">Monthly subscription</h1>
+      <p class="my-4">
+        <span class="text-white text-4xl align-middle inline-block">&dollar;29</span>
+        <span class="text-gray-200 align-middle inline-block ml-4">per month</span>
+      </p>
+      <p class="text-white">Full access for less than $1 a day</p>
+      <button role="button"
+        class="bg-brightyellow hover:shadow-sm hover:bg-white hover:text-brightyellow text-white font-bold rounded-lg p-4 mt-8 w-full">Sign
+        Up</button>
+    </section>
+    <section role="complementary" class="p-8 bg-cyan col-span-2 md:col-span-1 rounded-br-lg">
+      <h1 class="text-white text-xl font-bold py-4">Why us</h1>
+      <p class="text-lightgray">
+        Tutorials by industry experts<br>
+        Peer &amp; expert code review<br>
+        Coding exercises<br>
+        Access to our GitHub repos<br>
+        Community forum<br>
+        Flashcard decks<br>
+        New videos every week<br>
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
